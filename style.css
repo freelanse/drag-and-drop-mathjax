@@ -1,0 +1,96 @@
+ body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      text-align: center;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+    #formula-game {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 30px;
+      user-select: none;
+    }
+    #formulas, #names {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px;
+      min-height: 250px;
+      background: #e0e6ea;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    }
+    .item, .slot {
+      padding: 15px 25px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      cursor: grab;
+      transition: all 0.2s ease;
+      font-size: 1.1em;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 60px;
+    }
+    .item.dragging {
+      opacity: 0.5;
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .slot {
+      background: #e3f2fd;
+      border: 2px dashed #90caf9;
+      cursor: default;
+      color: #555;
+      box-shadow: none;
+    }
+    .slot .item {
+      cursor: grab;
+    }
+
+    #check-button {
+      margin-top: 25px;
+      padding: 12px 30px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #fff;
+      background-color: #2196f3;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(33, 150, 243, 0.4);
+      transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    #check-button:hover {
+      background-color: #1976d2;
+      box-shadow: 0 6px 12px rgba(33, 150, 243, 0.5);
+    }
+
+    #formula-message {
+      font-weight:bold;
+      margin-top:20px;
+      font-size: 1.2em;
+      padding: 10px;
+      border-radius: 8px;
+      min-width: 300px;
+      display: inline-block;
+    }
+    .win-message {
+      color: #2e7d32;
+      background-color: #e8f5e9;
+      border: 1px solid #a5d6a7;
+    }
+    .error-message {
+      color: #c62828;
+      background-color: #ffebee;
+      border: 1px solid #ef9a9a;
+    }
